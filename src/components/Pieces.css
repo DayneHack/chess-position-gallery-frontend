@@ -1,0 +1,51 @@
+#pieces {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(6, 100px);
+    width: 200px;
+    height: 600px;
+    background-color: #FE6B8B;
+}
+
+.tile {
+    display: grid;
+    place-content: center;
+    width: 100px;
+    height: 100px;
+    border: medium solid;
+}
+
+.darkTile {
+    background-color: #413f3f;
+    width: 100px;
+    height: 100px;
+}
+
+.lightTile {
+    background-color: #696966;
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    width: 85px;
+}
+
+.pieceImage {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85px;
+    z-index: auto;
+    position: absolute;
+
+}
+
+.pieceImage:hover {
+    cursor: grab;
+}
+
+.pieceImage:active {
+    cursor: grabbing;
+}
