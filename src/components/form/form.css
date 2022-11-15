@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 8px;
+    outline: auto;
+    outline-offset: 7px;
+}
+
+.label {
+    display: block;
+    margin-top: 5px;
+}
+
+.button {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family: Libre Baskerville;
+}
+
+body {
+    font-family: Libre Baskerville;
+}

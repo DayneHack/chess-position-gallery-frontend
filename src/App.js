@@ -1,29 +1,41 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import {AppBar, Typography, Grid, Box} from '@material-ui/core';
-//import pawn from './images/pawn.png';
+import {Grid, Box} from '@material-ui/core';
+import { useDispatch } from 'react-redux';
+import { getPosts } from './actions/posts'
 
 import Pieces from './components/Pieces';
 import Board from './components/Board';
-import useStyles from './styles';
+import Gallery from './components/gallery/Gallery'
+import Form from './components/form/form';
 
 const App = () => {
-	const classes = useStyles();
+
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getPosts());
+	}, [dispatch]);
+
 	return(
-		<React.Fragment>
-			<AppBar className = {classes.heading} position='static' color='inherit'>
-				<Typography variant='h2' align='center'>Chess Position Evaluator</Typography>
-			</AppBar>
+		<>
+			<ul className='header'>
+				<div className='header-text' variant='h1' align='center'>Chess Position Gallery</div>
+			</ul>
 			<Grid container spacing={2} justifyContent='center'>
-				<Box item xs={4}>
+				<Box item md={2}>
 					<Pieces />
 				</Box>
-				<Box item xs={8}>
+				<Box item md={8}>
 					<Board />
 				</Box>
+				<Box item md={2}>
+					<Form />
+				</Box>
 			</Grid>
-		</React.Fragment>
+			<Gallery className='gallery'/>
+		</>
 			
   	);
 }

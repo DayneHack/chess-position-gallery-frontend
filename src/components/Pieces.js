@@ -9,7 +9,6 @@ const Pieces = () => {
 
     const populatePieces = () => {
 
-        console.log('yo')
         let pieces = [];
         let flag = true;
         const sourceArrayW = ['images/w_rook.png', 'images/w_knight.png', 'images/w_bishop.png', 'images/w_queen.png', 'images/w_king.png', 'images/w_pawn.png'];
