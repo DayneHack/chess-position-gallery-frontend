@@ -94,10 +94,10 @@ const Pieces = () => {
         const chessboard = chessboardRef.current;
 
         if(activePiece && chessboard){
-            const x = Math.floor((event.clientX - chessboard.offsetLeft - 200) / 100);
-            const y = Math.abs(Math.ceil((event.clientY - chessboard.offsetTop - 800) / 100));
+            //const x = Math.floor((event.clientX - chessboard.offsetLeft - 200) / 100);
+            //const y = Math.abs(Math.ceil((event.clientY - chessboard.offsetTop - 800) / 100));
 
-            console.log(x,y);
+            //console.log(x,y);
 /*
             setPieces((value) => {
                 const pieces = value.map((p) => {

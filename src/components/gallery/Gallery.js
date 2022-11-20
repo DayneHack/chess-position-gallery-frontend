@@ -9,12 +9,11 @@ const Gallery = () =>{
     console.log(posts);
 
     return(
-        <>
-        <h1>Gallery</h1>
-
-        <Post />
-        <Post />
-        </>
+        <div className='gallery'>
+            {posts.map((post) => (
+                <Post key={post.id} post={post}></Post>
+            ))};
+        </div>
     )
 }
 

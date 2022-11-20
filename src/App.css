@@ -5,8 +5,7 @@
 	font-size: 50px;
 }
 
-.gallery {
-	justify-content: 'center';
-	align-items: 'auto';
-	display: 'flex';
+.main {
+	display: flex;
+	justify-content: center;
 }

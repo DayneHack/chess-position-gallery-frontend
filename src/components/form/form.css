@@ -8,6 +8,8 @@
     margin-top: 8px;
     outline: auto;
     outline-offset: 7px;
+    width: 275px;
+    height: 250px;
 }
 
 .label {

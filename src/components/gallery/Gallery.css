@@ -1,0 +1,7 @@
+.gallery {
+    justify-content: center;
+    display: grid;
+    gap: 30px;
+    grid-auto-rows: auto;
+    margin-top: 50px;
+}
