@@ -41,6 +41,7 @@ const Form = ({ currId, setCurrId}) => {
 
     const saveImg = () => {
     	domtoimage.toBlob(document.getElementById('main'))
+        //domtoimage.toBlob(document.getElementsByClassName('board'))
     		.then(async function(blob) {
 		await blobToBase64(blob)
         	.then(base64String => setPostData({...postData, image: base64String}));
