@@ -2,12 +2,15 @@ import './Post.css';
 import moment from 'moment';
 
 import { Card, CardMedia, CardContent, CardActions } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
+import { deletePost } from '../../actions/posts';
 
 import useStyles from './styles';
 
-const Post = ({ post }) =>{
+const Post = ({ post, setCurrId }) =>{
 
     const classes = useStyles();
+    const dispatch = useDispatch();
 
     return(
         
@@ -18,14 +21,14 @@ const Post = ({ post }) =>{
                 <b>{moment(post.createdAt).fromNow()}</b>
             </div>
             <div className={classes.overlay}>
-                <button onClick={() => {}}>...</button>
+                <button onClick={() => setCurrId(post._id)}>Update</button>
             </div>
             <CardContent>
                 <p>{post.description}</p>
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <button onClick={() => {}}>Like {post.likeCount}</button>
-                <button onClick={() => {}}>Delete</button>
+                <button onClick={() => dispatch(deletePost(post._id))}>Delete</button>
             </CardActions>
 
         </Card>

@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts'
@@ -11,11 +11,12 @@ import Form from './components/form/form';
 
 const App = () => {
 
+	const [currId, setCurrId] = useState(null);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(getPosts());
-	}, [dispatch]);
+	}, [currId, dispatch]);
 
 	return(
 		<>
@@ -29,10 +30,10 @@ const App = () => {
 					<Board />
 				</div>
 
-				<Form />
+				<Form currId={currId} setCurrId={setCurrId}/>
 
 			</div>
-			<Gallery />
+			<Gallery setCurrId={setCurrId}/>
 		</>
 			
   	);
